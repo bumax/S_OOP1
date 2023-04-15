@@ -1,15 +1,14 @@
 package exercises;
 
 public class Motorcycle extends Vehicle{
-    public Motorcycle(String inColor){
-        color = inColor;
-        wheelsNum = 2;
+    public Motorcycle(String inColor, String inModel, Double inWeight){
+        super(inColor, inModel, 2, inWeight);
     }
 
     public void run(){
-        speed = 120.0;
+        super.setSpeed(120.0);
         super.run();
-        System.out.println("Мотоцикл поехал со скоростью " + speed + " км/ч");
+        System.out.println("Мотоцикл поехал со скоростью " + super.getSpeed() + " км/ч");
     }
 
 }

@@ -1,14 +1,13 @@
 package exercises;
 
 public class Car extends Vehicle {
-    public Car(String inColor){
-        color = inColor;
-        wheelsNum = 4;
+    public Car(String inColor, String inModel, Double inWeight){
+        super(inColor, inModel, 4, inWeight);
     }
     public void run(){
-        speed = 60.0;
+        super.setSpeed(60.0);
         super.run();
-        System.out.println(color + " автомобиль поехал");
+        System.out.println(super.getColor() + " автомобиль поехал");
     }
 //    protected Integer wheelsNum = 4;
 }

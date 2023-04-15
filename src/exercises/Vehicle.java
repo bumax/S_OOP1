@@ -1,14 +1,17 @@
 package exercises;
 
 public class Vehicle {
-    public Vehicle(){
-        wheelsNum = null;
+    public Vehicle(String inColor, String inModel, Integer inWheelsNum, Double inWeight){
+        color = inColor;
+        model = inModel;
+        wheelsNum = inWheelsNum;
+        weight = inWeight;
     }
-    protected String color;
-    protected String model;
-    protected Integer wheelsNum;
-    protected Double weight;
-    protected Double speed;
+    private String color;
+    private String model;
+    private Integer wheelsNum;
+    private Double weight;
+    private Double speed;
     private Boolean isRun;
     public void run(){
         isRun = true;
@@ -33,10 +36,16 @@ public class Vehicle {
     public Double getWeight(){
         return weight;
     }
-
+    public void setSpeed(Double inSpeed){
+        speed = inSpeed;
+    }
     public Double getSpeed(){
         return speed;
     }
+    public String getColor(){
+        return color;
+    }
+
 
     @Override
     public String toString() {
