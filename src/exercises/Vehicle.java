@@ -1,55 +1,66 @@
 package exercises;
 
 public class Vehicle {
-    public Vehicle(String inColor, String inModel, Integer inWheelsNum, Double inWeight){
+    public Vehicle(String inColor, String inModel, Integer inWheelsNum, Double inWeight) {
         color = inColor;
         model = inModel;
         wheelsNum = inWheelsNum;
         weight = inWeight;
+        speed = 0.0;
     }
+
     private String color;
     private String model;
     private Integer wheelsNum;
     private Double weight;
     private Double speed;
     private Boolean isRun;
-    public void run(){
+
+    public void run() {
         isRun = true;
     }
-    public void stop(){
+
+    public void stop() {
         speed = 0.0;
         isRun = false;
     }
-    public Integer getWheels(){
-        return  wheelsNum;
+
+    public Integer getWheels() {
+        return wheelsNum;
     }
-    public void setModel(String inModel){
+
+    public void setModel(String inModel) {
         model = inModel;
     }
-    public String getModel(){
+
+    public String getModel() {
         return model;
     }
 
-    public void setWeight(Double inWeight){
+    public void setWeight(Double inWeight) {
         weight = inWeight;
     }
-    public Double getWeight(){
+
+    public Double getWeight() {
         return weight;
     }
-    public void setSpeed(Double inSpeed){
+
+    public void setSpeed(Double inSpeed) {
         speed = inSpeed;
     }
-    public Double getSpeed(){
+
+    public Double getSpeed() {
         return speed;
     }
-    public String getColor(){
+
+    public String getColor() {
         return color;
     }
 
 
     @Override
     public String toString() {
-        return "Vehicle{" +
+        return "{" +
                 "color='" + color + '\'' +
                 ", model='" + model + '\'' +
                 ", wheelsNum=" + wheelsNum +
